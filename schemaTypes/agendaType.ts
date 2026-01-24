@@ -6,6 +6,12 @@ export const agendaType = defineType({
     type: 'document',
     fields: [
         defineField({
+            name: 'active',
+            title: 'Sichtbar',
+            type: 'boolean',
+            initialValue: true,
+        }),
+        defineField({
             name: 'date',
             title: 'Date',
             type: 'datetime',
@@ -28,12 +34,6 @@ export const agendaType = defineType({
             title: 'Google Maps Link',
             type: 'url',
             validation: (rule) => rule.required(),
-        }),
-        defineField({
-            name: 'active',
-            title: 'Active / Visible',
-            type: 'boolean',
-            initialValue: true,
         }),
     ],
     preview: {

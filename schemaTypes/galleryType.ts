@@ -13,6 +13,17 @@ export const galleryType = defineType({
             validation: (rule) => rule.required(),
         }),
         defineField({
+            name: 'heroImage',
+            title: 'Hero Image',
+            type: 'image',
+            options: { hotspot: true },
+        }),
+        defineField({
+            name: 'logo',
+            title: 'Logo',
+            type: 'image',
+        }),
+        defineField({
             name: 'years',
             title: 'Years',
             type: 'array',
