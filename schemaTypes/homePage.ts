@@ -9,13 +9,13 @@ export const homePage = defineType({
             name: 'title',
             title: 'Page Title', // For internal reference
             type: 'string',
-            initialValue: 'Home Page Content',
+            initialValue: 'Home Page',
             readOnly: true,
         }),
         defineField({
             name: 'heroImage',
             title: 'Hero Image',
-            type: 'image',
+            type: 'cloudinary.asset',
             options: {
                 hotspot: true,
             },
@@ -48,7 +48,7 @@ export const homePage = defineType({
                 defineField({
                     name: 'logo',
                     title: 'Logo',
-                    type: 'image',
+                    type: 'cloudinary.asset',
                 }),
                 defineField({
                     name: 'text',
@@ -70,7 +70,7 @@ export const homePage = defineType({
                 defineField({
                     name: 'logo',
                     title: 'Logo',
-                    type: 'image',
+                    type: 'cloudinary.asset',
                 }),
                 defineField({
                     name: 'text',

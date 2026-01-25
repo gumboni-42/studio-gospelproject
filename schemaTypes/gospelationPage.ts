@@ -14,13 +14,13 @@ export const gospelationPage = defineType({
         defineField({
             name: 'heroImage',
             title: 'Hero Image',
-            type: 'image',
+            type: 'cloudinary.asset',
             options: { hotspot: true },
         }),
         defineField({
             name: 'logo',
             title: 'Logo',
-            type: 'image',
+            type: 'cloudinary.asset',
         }),
         defineField({
             name: 'subtitle',

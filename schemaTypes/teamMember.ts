@@ -37,7 +37,7 @@ export const teamMember = defineType({
         }),
         defineField({
             name: 'image',
-            type: 'image',
+            type: 'cloudinary.asset',
             options: { hotspot: true },
         }),
         defineField({
