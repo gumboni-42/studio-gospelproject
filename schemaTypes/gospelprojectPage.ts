@@ -4,6 +4,7 @@ export default {
     title: 'Gospelproject Page',
     type: 'document',
     fields: [
+        { name: 'visible', title: 'Visible on website', type: 'boolean', initialValue: true, description: 'Uncheck to hide this page from visitors and the navigation.' },
         { name: 'title', type: 'string' },
         { name: 'heroImage', type: 'cloudinary.asset' },
         { name: 'logo', title: 'Logo', type: 'cloudinary.asset' },

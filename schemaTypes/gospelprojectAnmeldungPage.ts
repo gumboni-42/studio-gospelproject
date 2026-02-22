@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
-export const gospelationPage = defineType({
-    name: 'gospelationPage',
-    title: 'Gospelation Page',
+export const gospelprojectAnmeldungPage = defineType({
+    name: 'gospelprojectAnmeldungPage',
+    title: 'Gospelproject Anmeldung Page',
     type: 'document',
     fields: [
         defineField({
@@ -36,7 +36,7 @@ export const gospelationPage = defineType({
         }),
         defineField({
             name: 'body',
-            title: 'Text Body',
+            title: 'Content',
             type: 'array',
             of: [{ type: 'block' }],
             description: 'Main content with formatting support.',

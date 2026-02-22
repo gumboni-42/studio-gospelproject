@@ -42,6 +42,36 @@ export default defineConfig({
               ),
 
             S.listItem()
+              .title('Gospelproject Mitmachen Page')
+              .id('gospelprojectMitmachenPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('gospelprojectMitmachenPage')
+                  .documentId('gospelprojectMitmachenPage')
+              ),
+
+            S.listItem()
+              .title('Gospelproject Anmeldung Page')
+              .id('gospelprojectAnmeldungPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('gospelprojectAnmeldungPage')
+                  .documentId('gospelprojectAnmeldungPage')
+              ),
+
+            S.listItem()
+              .title('Gospelproject Termine Page')
+              .id('gospelprojectTerminePage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('gospelprojectTerminePage')
+                  .documentId('gospelprojectTerminePage')
+              ),
+
+            S.listItem()
               .title('Gospelation Page')
               .id('gospelationPage')
               .icon(DocumentIcon)
@@ -92,19 +122,39 @@ export default defineConfig({
                   .documentId('simplePage')
               ),
 
+            S.listItem()
+              .title('Kontakt Page')
+              .id('kontaktPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('kontaktPage')
+                  .documentId('kontaktPage')
+              ),
+
+            S.listItem()
+              .title('Gospelproject Member Page')
+              .id('gospelprojectMemberPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('gospelprojectMemberPage')
+                  .documentId('gospelprojectMemberPage')
+              ),
+
             S.divider(), // Adds a visual line in the sidebar
 
             // 2. Regular Document Lists (e.g. your Gallery or Blog)
             // This filters out the singletons so they don't appear in the "Regular" list
             ...S.documentTypeListItems().filter(
-              (listItem) => !['gospelprojectPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'simplePage'].includes(listItem.getId() as string)
+              (listItem) => !['gospelprojectPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'simplePage', 'kontaktPage'].includes(listItem.getId() as string)
             ),
           ]),
     }),
     visionTool(),
     cloudinarySchemaPlugin(),
     presentationTool({
-      previewUrl: process.env.NEXT_PUBLIC_BASE_URL,
+      previewUrl: process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000',
     }),
   ],
 

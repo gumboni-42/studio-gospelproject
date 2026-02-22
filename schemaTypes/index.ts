@@ -10,5 +10,10 @@ import gospelationEngagierenPage from './gospelationEngagierenPage'
 import { threeImageSection } from './threeImageSection'
 import gospelprojectPage from './gospelprojectPage'
 import { simplePage } from './simplePage'
+import { gospelprojectMitmachenPage } from './gospelprojectMitmachenPage'
+import { gospelprojectAnmeldungPage } from './gospelprojectAnmeldungPage'
+import { gospelprojectTerminePage } from './gospelprojectTerminePage'
+import { kontaktPage } from './kontaktPage'
+import { gospelprojectMemberPage } from './gospelprojectMemberPage'
 
-export const schemaTypes = [postType, teamMember, agendaType, homePage, galleryType, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, simplePage]
+export const schemaTypes = [postType, teamMember, agendaType, homePage, galleryType, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, simplePage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage]
