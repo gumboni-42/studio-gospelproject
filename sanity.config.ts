@@ -142,12 +142,22 @@ export default defineConfig({
                   .documentId('gospelprojectMemberPage')
               ),
 
+            S.listItem()
+              .title('Footer Settings')
+              .id('footerSettings')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('footerSettings')
+                  .documentId('footerSettings')
+              ),
+
             S.divider(), // Adds a visual line in the sidebar
 
             // 2. Regular Document Lists (e.g. your Gallery or Blog)
             // This filters out the singletons so they don't appear in the "Regular" list
             ...S.documentTypeListItems().filter(
-              (listItem) => !['gospelprojectPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'simplePage', 'kontaktPage'].includes(listItem.getId() as string)
+              (listItem) => !['gospelprojectPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'simplePage', 'kontaktPage', 'footerSettings'].includes(listItem.getId() as string)
             ),
           ]),
     }),
