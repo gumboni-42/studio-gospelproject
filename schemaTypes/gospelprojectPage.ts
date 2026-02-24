@@ -10,6 +10,6 @@ export default {
         { name: 'logo', title: 'Logo', type: 'cloudinary.asset' },
         { name: 'subtitle', type: 'string' },
         { name: 'body', type: 'array', of: [{ type: 'block' }], title: 'Content' },
-        { name: 'callToAction', type: 'object', fields: [{ name: 'text', type: 'string' }, { name: 'url', type: 'url' }] },
+        { name: 'callToAction', type: 'callToAction' },
     ]
 }

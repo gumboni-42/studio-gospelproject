@@ -35,6 +35,27 @@ export const agendaType = defineType({
             type: 'url',
             validation: (rule) => rule.required(),
         }),
+        defineField({
+            name: 'description',
+            title: 'Beschreibung',
+            type: 'array',
+            of: [{ type: 'block' }],
+        }),
+        defineField({
+            name: 'logoType',
+            title: 'Logo Option',
+            type: 'string',
+            description: 'Choose a logo to display in the top right corner of the agenda item.',
+            options: {
+                list: [
+                    { title: 'None', value: 'none' },
+                    { title: 'Gospelation', value: 'gospelation' },
+                    { title: 'Gospelproject', value: 'gospelproject' },
+                ],
+                layout: 'dropdown',
+            },
+            initialValue: 'gospelation',
+        }),
     ],
     preview: {
         select: {

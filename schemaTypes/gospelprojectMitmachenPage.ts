@@ -35,31 +35,33 @@ export const gospelprojectMitmachenPage = defineType({
             type: 'string',
         }),
         defineField({
+            name: 'projectStatus',
+            title: 'Is a project currently planned?',
+            type: 'boolean',
+            initialValue: true,
+            description: 'Turn this OFF to display the "inactive" content below, explaining that no project is planned.',
+        }),
+        defineField({
             name: 'body',
-            title: 'Content',
+            title: 'Active Content',
             type: 'array',
             of: [{ type: 'block' }],
-            description: 'Main content with formatting support.',
+            description: 'Main content explaining how to take part.',
+            hidden: ({ document }) => document?.projectStatus === false,
+        }),
+        defineField({
+            name: 'inactiveBody',
+            title: 'Inactive Content',
+            type: 'array',
+            of: [{ type: 'block' }],
+            description: 'Content explaining that no project is currently planned.',
+            hidden: ({ document }) => document?.projectStatus !== false,
         }),
         defineField({
             name: 'callToAction',
             title: 'Call to Action',
-            type: 'object',
-            fields: [
-                defineField({
-                    name: 'text',
-                    title: 'Button Text',
-                    type: 'string',
-                }),
-                defineField({
-                    name: 'url',
-                    title: 'Button URL',
-                    type: 'url',
-                    validation: (rule) => rule.uri({
-                        scheme: ['http', 'https', 'mailto', 'tel'],
-                    }),
-                }),
-            ],
+            type: 'callToAction',
+            hidden: ({ document }) => document?.projectStatus === false,
         }),
     ],
 })

@@ -45,19 +45,7 @@ export default defineType({
         defineField({
             name: 'callToAction',
             title: 'Call to Action',
-            type: 'object',
-            fields: [
-                defineField({
-                    name: 'text',
-                    title: 'Button Text',
-                    type: 'string',
-                }),
-                defineField({
-                    name: 'url',
-                    title: 'Button URL',
-                    type: 'string',
-                }),
-            ],
+            type: 'callToAction',
         }),
     ],
 })
