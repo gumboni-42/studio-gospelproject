@@ -20,10 +20,18 @@ export const navigationSettings = defineType({
                             type: 'reference',
                             to: [
                                 { type: 'gospelprojectPage' },
+                                { type: 'gospelprojectMitmachenPage' },
+                                { type: 'gospelprojectAnmeldungPage' },
+                                { type: 'gospelprojectTerminePage' },
+                                { type: 'teamPage' },
+                                { type: 'gospelprojectMemberPage' },
                                 { type: 'gospelationPage' },
+                                { type: 'gospelationEngagierenPage' },
                                 { type: 'agendaPage' },
                                 { type: 'gallery' },
                                 { type: 'kontaktPage' },
+                                { type: 'sponsoringPage' },
+                                { type: 'gospelprojectBedingungenPage' },
                             ],
                             validation: Rule => Rule.required()
                         }),
@@ -32,6 +40,59 @@ export const navigationSettings = defineType({
                             title: 'Custom Navigation Title',
                             type: 'string',
                             description: 'Optional: Override the default page title in the navigation bar.'
+                        }),
+                        defineField({
+                            name: 'children',
+                            title: 'Sub-Navigation Items',
+                            type: 'array',
+                            description: 'Add nested pages under this menu item. You can reorder them and provide custom titles.',
+                            of: [
+                                {
+                                    type: 'object',
+                                    fields: [
+                                        defineField({
+                                            name: 'page',
+                                            title: 'Page Reference',
+                                            type: 'reference',
+                                            to: [
+                                                { type: 'gospelprojectPage' },
+                                                { type: 'gospelprojectMitmachenPage' },
+                                                { type: 'gospelprojectAnmeldungPage' },
+                                                { type: 'gospelprojectTerminePage' },
+                                                { type: 'teamPage' },
+                                                { type: 'gospelprojectMemberPage' },
+                                                { type: 'gospelationPage' },
+                                                { type: 'gospelationEngagierenPage' },
+                                                { type: 'agendaPage' },
+                                                { type: 'gallery' },
+                                                { type: 'kontaktPage' },
+                                                { type: 'sponsoringPage' },
+                                                { type: 'gospelprojectBedingungenPage' },
+                                            ],
+                                            validation: Rule => Rule.required()
+                                        }),
+                                        defineField({
+                                            name: 'title',
+                                            title: 'Custom Navigation Title',
+                                            type: 'string',
+                                            description: 'Optional: Override the default page title in the dropdown menu.'
+                                        })
+                                    ],
+                                    preview: {
+                                        select: {
+                                            title: 'title',
+                                            pageTitle: 'page.title',
+                                            pageId: 'page._id'
+                                        },
+                                        prepare({ title, pageTitle, pageId }) {
+                                            return {
+                                                title: title || pageTitle || pageId || 'Unnamed Sub-Page',
+                                                subtitle: title ? 'Custom Title' : 'Default Title'
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
                         })
                     ],
                     preview: {
@@ -51,4 +112,11 @@ export const navigationSettings = defineType({
             ],
         }),
     ],
+    preview: {
+        prepare() {
+            return {
+                title: 'Navigation Settings'
+            }
+        }
+    }
 })

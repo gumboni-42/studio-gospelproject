@@ -62,6 +62,16 @@ export default defineConfig({
               ),
 
             S.listItem()
+              .title('Sponsoring Page')
+              .id('sponsoringPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('sponsoringPage')
+                  .documentId('sponsoringPage')
+              ),
+
+            S.listItem()
               .title('Gospelproject Termine Page')
               .id('gospelprojectTerminePage')
               .icon(DocumentIcon)
@@ -69,6 +79,26 @@ export default defineConfig({
                 S.document()
                   .schemaType('gospelprojectTerminePage')
                   .documentId('gospelprojectTerminePage')
+              ),
+
+            S.listItem()
+              .title('Gospelproject Teilnahmebedingungen Page')
+              .id('gospelprojectBedingungenPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('gospelprojectBedingungenPage')
+                  .documentId('gospelprojectBedingungenPage')
+              ),
+
+            S.listItem()
+              .title('Gospelproject Member Page')
+              .id('gospelprojectMemberPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('gospelprojectMemberPage')
+                  .documentId('gospelprojectMemberPage')
               ),
 
             S.listItem()
@@ -132,15 +162,6 @@ export default defineConfig({
                   .documentId('kontaktPage')
               ),
 
-            S.listItem()
-              .title('Gospelproject Member Page')
-              .id('gospelprojectMemberPage')
-              .icon(DocumentIcon)
-              .child(
-                S.document()
-                  .schemaType('gospelprojectMemberPage')
-                  .documentId('gospelprojectMemberPage')
-              ),
 
             S.listItem()
               .title('Footer Settings')
@@ -167,7 +188,7 @@ export default defineConfig({
             // 2. Regular Document Lists (e.g. your Gallery or Blog)
             // This filters out the singletons so they don't appear in the "Regular" list
             ...S.documentTypeListItems().filter(
-              (listItem) => !['gospelprojectPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'simplePage', 'kontaktPage', 'footerSettings', 'navigationSettings'].includes(listItem.getId() as string)
+              (listItem) => !['sponsoringPage', 'gospelprojectPage', 'gospelprojectBedingungenPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'simplePage', 'kontaktPage', 'footerSettings', 'navigationSettings'].includes(listItem.getId() as string)
             ),
           ]),
     }),

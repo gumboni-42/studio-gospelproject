@@ -1,4 +1,5 @@
 import { postType } from './postType'
+import { sponsoringPage } from './sponsoringPage'
 import { teamMember } from './teamMember'
 import { agendaType } from './agendaType'
 import { homePage } from './homePage'
@@ -9,7 +10,6 @@ import { teamPage } from './teamPage'
 import gospelationEngagierenPage from './gospelationEngagierenPage'
 import { threeImageSection } from './threeImageSection'
 import gospelprojectPage from './gospelprojectPage'
-import { simplePage } from './simplePage'
 import { gospelprojectMitmachenPage } from './gospelprojectMitmachenPage'
 import { gospelprojectAnmeldungPage } from './gospelprojectAnmeldungPage'
 import { gospelprojectTerminePage } from './gospelprojectTerminePage'
@@ -18,5 +18,6 @@ import { gospelprojectMemberPage } from './gospelprojectMemberPage'
 import { footerSettings } from './footerSettings'
 import { navigationSettings } from './navigationSettings'
 import { callToAction } from './callToAction'
+import { gospelprojectBedingungenPage } from './gospelprojectBedingungenPage'
 
-export const schemaTypes = [postType, teamMember, agendaType, homePage, galleryType, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, simplePage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction]
+export const schemaTypes = [postType, teamMember, agendaType, homePage, galleryType, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, gospelprojectBedingungenPage]
