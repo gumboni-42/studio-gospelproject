@@ -11,6 +11,13 @@ export const teamMember = defineType({
             validation: (rule) => rule.required(),
         }),
         defineField({
+            name: 'isVisible',
+            title: 'Visible on Website',
+            type: 'boolean',
+            description: 'Turn this off to hide the team member from the public team page.',
+            initialValue: true,
+        }),
+        defineField({
             name: 'order',
             title: 'Order',
             type: 'number',

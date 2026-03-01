@@ -32,8 +32,48 @@ export const homePage = defineType({
             name: 'newsItems',
             title: 'News Bar Items',
             type: 'array',
-            of: [{ type: 'string' }],
-            description: 'Add short news updates to display in the ticker.',
+            of: [
+                defineField({
+                    name: 'newsItem',
+                    title: 'News Item',
+                    type: 'object',
+                    fields: [
+                        defineField({
+                            name: 'text',
+                            title: 'Text',
+                            type: 'string',
+                            validation: (rule) => rule.required(),
+                        }),
+                        defineField({
+                            name: 'internalLink',
+                            title: 'Link (optional)',
+                            type: 'string',
+                            options: {
+                                list: [
+                                    { title: 'Home', value: '/' },
+                                    { title: 'Agenda', value: '/agenda' },
+                                    { title: 'Gospelproject', value: '/gospelproject' },
+                                    { title: 'Gospelproject - Mitmachen', value: '/gospelproject/mitmachen' },
+                                    { title: 'Gospelproject - Anmeldung', value: '/gospelproject/anmeldung' },
+                                    { title: 'Gospelproject - Termine', value: '/gospelproject/termine' },
+                                    { title: 'Gospelation', value: '/gospelation' },
+                                    { title: 'Team', value: '/gospelproject/team' },
+                                    { title: 'Kontakt', value: '/kontakt' },
+                                    { title: 'Member', value: '/gospelproject/member' },
+                                ],
+                                layout: 'dropdown',
+                            },
+                        }),
+                    ],
+                    preview: {
+                        select: {
+                            title: 'text',
+                            subtitle: 'internalLink',
+                        }
+                    }
+                })
+            ],
+            description: 'Add short news updates and optional links to display in the ticker.',
         }),
         defineField({
             name: 'gospelationSection',
@@ -54,6 +94,26 @@ export const homePage = defineType({
                     name: 'text',
                     title: 'Description Text',
                     type: 'text',
+                }),
+                defineField({
+                    name: 'internalLink',
+                    title: 'Internal Page URL',
+                    type: 'string',
+                    options: {
+                        list: [
+                            { title: 'Home', value: '/' },
+                            { title: 'Agenda', value: '/agenda' },
+                            { title: 'Gospelproject', value: '/gospelproject' },
+                            { title: 'Gospelproject - Mitmachen', value: '/gospelproject/mitmachen' },
+                            { title: 'Gospelproject - Anmeldung', value: '/gospelproject/anmeldung' },
+                            { title: 'Gospelproject - Termine', value: '/gospelproject/termine' },
+                            { title: 'Gospelation', value: '/gospelation' },
+                            { title: 'Team', value: '/gospelproject/team' },
+                            { title: 'Kontakt', value: '/kontakt' },
+                            { title: 'Member', value: '/gospelproject/member' },
+                        ],
+                        layout: 'dropdown',
+                    },
                 }),
             ]
         }),
@@ -77,6 +137,26 @@ export const homePage = defineType({
                     title: 'Description Text',
                     type: 'text',
                 }),
+                defineField({
+                    name: 'internalLink',
+                    title: 'Internal Page URL',
+                    type: 'string',
+                    options: {
+                        list: [
+                            { title: 'Home', value: '/' },
+                            { title: 'Agenda', value: '/agenda' },
+                            { title: 'Gospelproject', value: '/gospelproject' },
+                            { title: 'Gospelproject - Mitmachen', value: '/gospelproject/mitmachen' },
+                            { title: 'Gospelproject - Anmeldung', value: '/gospelproject/anmeldung' },
+                            { title: 'Gospelproject - Termine', value: '/gospelproject/termine' },
+                            { title: 'Gospelation', value: '/gospelation' },
+                            { title: 'Team', value: '/gospelproject/team' },
+                            { title: 'Kontakt', value: '/kontakt' },
+                            { title: 'Member', value: '/gospelproject/member' },
+                        ],
+                        layout: 'dropdown',
+                    },
+                })
             ]
         })
     ],

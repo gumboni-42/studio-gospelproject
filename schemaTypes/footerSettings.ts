@@ -45,4 +45,11 @@ export const footerSettings = defineType({
             validation: (rule) => rule.uri({ scheme: ['https'] }),
         }),
     ],
+    preview: {
+        prepare() {
+            return {
+                title: 'Footer Settings',
+            }
+        },
+    },
 })
