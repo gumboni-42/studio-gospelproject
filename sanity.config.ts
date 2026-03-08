@@ -195,7 +195,12 @@ export default defineConfig({
     visionTool(),
     cloudinarySchemaPlugin(),
     presentationTool({
-      previewUrl: process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000',
+      previewUrl: {
+        previewMode: {
+          enable: '/api/draft-mode/enable',
+        },
+        origin: process.env.SANITY_STUDIO_PREVIEW_URL ?? 'https://gospelproject.ch',
+      },
     }),
   ],
 
