@@ -199,7 +199,7 @@ export default defineConfig({
         previewMode: {
           enable: '/api/draft-mode/enable',
         },
-        origin: process.env.SANITY_STUDIO_PREVIEW_URL ?? 'https://gospelproject.ch',
+        origin: process.env.SANITY_STUDIO_PREVIEW_URL ?? 'https://new.gospelproject.ch',
       },
     }),
   ],
