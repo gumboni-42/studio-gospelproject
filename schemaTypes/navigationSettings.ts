@@ -32,6 +32,7 @@ export const navigationSettings = defineType({
                                 { type: 'kontaktPage' },
                                 { type: 'sponsoringPage' },
                                 { type: 'gospelprojectBedingungenPage' },
+                                { type: 'gospelvereinPage' },
                             ],
                             validation: Rule => Rule.required()
                         }),
@@ -68,6 +69,7 @@ export const navigationSettings = defineType({
                                                 { type: 'kontaktPage' },
                                                 { type: 'sponsoringPage' },
                                                 { type: 'gospelprojectBedingungenPage' },
+                                                { type: 'gospelvereinPage' },
                                             ],
                                             validation: Rule => Rule.required()
                                         }),

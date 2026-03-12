@@ -19,5 +19,6 @@ import { footerSettings } from './footerSettings'
 import { navigationSettings } from './navigationSettings'
 import { callToAction } from './callToAction'
 import { gospelprojectBedingungenPage } from './gospelprojectBedingungenPage'
+import { gospelvereinPage } from './gospelvereinPage'
 
-export const schemaTypes = [postType, teamMember, agendaType, homePage, galleryType, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, gospelprojectBedingungenPage]
+export const schemaTypes = [postType, teamMember, agendaType, homePage, galleryType, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, gospelprojectBedingungenPage, gospelvereinPage]
