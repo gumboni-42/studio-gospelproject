@@ -42,6 +42,12 @@ export const gospelprojectTerminePage = defineType({
             description: 'Main content with formatting support.',
         }),
         defineField({
+            name: 'htmlTable',
+            title: 'HTML Dates Table',
+            type: 'text',
+            description: 'Paste your HTML table for dates here. This will be rendered directly on the page below the main content.',
+        }),
+        defineField({
             name: 'callToAction',
             title: 'Call to Action',
             type: 'object',
