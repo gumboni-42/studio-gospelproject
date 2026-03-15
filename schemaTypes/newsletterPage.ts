@@ -33,5 +33,36 @@ export const newsletterPage = defineType({
             description: 'The message shown after a successful signup.',
             initialValue: 'Vielen Dank für deine Anmeldung! Wir haben dir eine Bestätigungs-E-Mail gesendet.',
         }),
+        defineField({
+            name: 'vornameLabel',
+            title: 'Vorname Label',
+            type: 'string',
+            initialValue: 'Vorname',
+        }),
+        defineField({
+            name: 'nachnameLabel',
+            title: 'Nachname Label',
+            type: 'string',
+            initialValue: 'Nachname',
+        }),
+        defineField({
+            name: 'emailLabel',
+            title: 'Email Label',
+            type: 'string',
+            initialValue: 'E-Mail-Adresse',
+        }),
+        defineField({
+            name: 'buttonText',
+            title: 'Button Text',
+            type: 'string',
+            initialValue: 'Jetzt abonnieren',
+        }),
+        defineField({
+            name: 'footerText',
+            title: 'Footer Text',
+            type: 'text',
+            description: 'The privacy/consent notice at the bottom of the form.',
+            initialValue: 'Durch das Abonnieren erklärst du dich damit einverstanden, Gospelupdates zu erhalten. Wir versprechen, dass wir deine Daten nicht an Dritte weitergeben und du dich jederzeit abmelden kannst.',
+        }),
     ],
 })
