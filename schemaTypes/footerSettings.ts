@@ -44,6 +44,18 @@ export const footerSettings = defineType({
             type: 'url',
             validation: (rule) => rule.uri({ scheme: ['https'] }),
         }),
+        defineField({
+            name: 'spotifyUrl',
+            title: 'Spotify URL',
+            type: 'url',
+            validation: (rule) => rule.uri({ scheme: ['https'] }),
+        }),
+        defineField({
+            name: 'appleMusicUrl',
+            title: 'Apple Music URL',
+            type: 'url',
+            validation: (rule) => rule.uri({ scheme: ['https'] }),
+        }),
     ],
     preview: {
         prepare() {
