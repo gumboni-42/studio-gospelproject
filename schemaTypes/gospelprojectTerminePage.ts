@@ -42,6 +42,15 @@ export const gospelprojectTerminePage = defineType({
             description: 'Main content with formatting support.',
         }),
         defineField({
+            name: 'pdfDownload',
+            title: 'PDF Download',
+            type: 'file',
+            options: {
+                accept: 'application/pdf',
+            },
+            description: 'Upload a PDF file to be available for download.',
+        }),
+        defineField({
             name: 'htmlTable',
             title: 'HTML Dates Table',
             type: 'text',
