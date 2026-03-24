@@ -35,9 +35,12 @@ export const zusammenklangPage = defineType({
         }),
         defineField({
             name: 'sponsoringKonzeptPdf',
-            title: 'Sponsoring-Konzept PDF URL',
-            type: 'url',
-            description: 'Link to the Sponsoring-Konzept PDF document.',
+            title: 'Sponsoring-Konzept PDF',
+            type: 'file',
+            options: {
+                accept: '.pdf'
+            },
+            description: 'Upload the Sponsoring-Konzept PDF here.',
         }),
         defineField({
             name: 'formIntroText',
