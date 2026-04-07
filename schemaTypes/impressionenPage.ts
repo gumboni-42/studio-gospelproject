@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
-export const galleryType = defineType({
-    name: 'gallery',
-    title: 'Gallery',
+export const impressionenPage = defineType({
+    name: 'impressionenPage',
+    title: 'Impressionen Page',
     type: 'document',
     fields: [
         defineField({
@@ -16,7 +16,7 @@ export const galleryType = defineType({
             name: 'title',
             title: 'Title',
             type: 'string',
-            initialValue: 'Gallery',
+            initialValue: 'Impressionen',
             validation: (rule) => rule.required(),
         }),
         defineField({

@@ -143,16 +143,6 @@ export default defineConfig({
               ),
 
             S.listItem()
-              .title('Simple Page')
-              .id('simplePage')
-              .icon(DocumentIcon)
-              .child(
-                S.document()
-                  .schemaType('simplePage')
-                  .documentId('simplePage')
-              ),
-
-            S.listItem()
               .title('Kontakt Page')
               .id('kontaktPage')
               .icon(DocumentIcon)
@@ -212,13 +202,22 @@ export default defineConfig({
                   .schemaType('zusammenklangPage')
                   .documentId('zusammenklangPage')
               ),
+            S.listItem()
+              .title('Impressionen Page')
+              .id('impressionenPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('impressionenPage')
+                  .documentId('impressionenPage')
+              ),
 
             S.divider(), // Adds a visual line in the sidebar
 
             // 2. Regular Document Lists (e.g. your Gallery or Blog)
             // This filters out the singletons so they don't appear in the "Regular" list
             ...S.documentTypeListItems().filter(
-              (listItem) => !['sponsoringPage', 'gospelprojectPage', 'gospelprojectBedingungenPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'simplePage', 'kontaktPage', 'footerSettings', 'navigationSettings', 'gospelvereinPage', 'newsletterPage', 'zusammenklangPage'].includes(listItem.getId() as string)
+              (listItem) => !['sponsoringPage', 'gospelprojectPage', 'gospelprojectBedingungenPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'kontaktPage', 'footerSettings', 'navigationSettings', 'gospelvereinPage', 'newsletterPage', 'zusammenklangPage', 'impressionenPage'].includes(listItem.getId() as string)
             ),
           ]),
     }),

@@ -1,9 +1,8 @@
-import { postType } from './postType'
 import { sponsoringPage } from './sponsoringPage'
 import { teamMember } from './teamMember'
 import { agendaType } from './agendaType'
 import { homePage } from './homePage'
-import { galleryType } from './galleryType'
+import { impressionenPage } from './impressionenPage'
 import { gospelationPage } from './gospelationPage'
 import { agendaPage } from './agendaPage'
 import { teamPage } from './teamPage'
@@ -23,4 +22,4 @@ import { gospelvereinPage } from './gospelvereinPage'
 import { newsletterPage } from './newsletterPage'
 import { zusammenklangPage } from './zusammenklangPage'
 
-export const schemaTypes = [postType, teamMember, agendaType, homePage, galleryType, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, gospelprojectBedingungenPage, gospelvereinPage, newsletterPage, zusammenklangPage]
+export const schemaTypes = [teamMember, agendaType, homePage, impressionenPage, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, gospelprojectBedingungenPage, gospelvereinPage, newsletterPage, zusammenklangPage]
