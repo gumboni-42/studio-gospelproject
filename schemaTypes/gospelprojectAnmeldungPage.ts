@@ -96,6 +96,25 @@ export const gospelprojectAnmeldungPage = defineType({
             description: 'Current number of signups (System managed)',
         }),
         defineField({
+            name: 'ausgebuchtTitle',
+            title: 'Ausgebucht Title',
+            type: 'string',
+            initialValue: 'Ausgebucht',
+        }),
+        defineField({
+            name: 'ausgebuchtText',
+            title: 'Ausgebucht Text',
+            type: 'text',
+            initialValue: 'Leider sind für dieses Projekt bereits alle Plätze belegt. Wir freuen uns, wenn du beim nächsten Mal dabei bist!',
+        }),
+        defineField({
+            name: 'signupFormText',
+            title: 'Signup Form Instruction Text',
+            type: 'array',
+            of: [{ type: 'block' }],
+            description: 'Instruction text shown above the signup form. Supports links and formatting.',
+        }),
+        defineField({
             name: 'callToAction',
             title: 'Call to Action',
             type: 'callToAction',
