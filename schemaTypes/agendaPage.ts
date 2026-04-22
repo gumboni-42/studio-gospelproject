@@ -29,5 +29,12 @@ export const agendaPage = defineType({
             title: 'Logo',
             type: 'cloudinary.asset',
         }),
+        defineField({
+            name: 'showLogo',
+            title: 'Show Logo',
+            type: 'boolean',
+            initialValue: true,
+            description: 'Toggle to show or hide the logo on the page.',
+        }),
     ],
 })
