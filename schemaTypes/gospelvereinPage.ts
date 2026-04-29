@@ -68,6 +68,13 @@ export const gospelvereinPage = defineType({
             options: { hotspot: true },
         }),
         defineField({
+            name: 'goennerText',
+            title: 'Gönner Text',
+            type: 'array',
+            of: [{ type: 'block' }],
+            description: 'Text section for Gönner.',
+        }),
+        defineField({
             name: 'callToAction',
             title: 'Call to Action',
             type: 'object',
@@ -92,6 +99,13 @@ export const gospelvereinPage = defineType({
             title: 'Twint QR Code Image',
             type: 'cloudinary.asset',
             description: 'QR Code for donations (Spende section).',
+        }),
+        defineField({
+            name: 'twintText',
+            title: 'Twint Text',
+            type: 'array',
+            of: [{ type: 'block' }],
+            description: 'Text section for Twint.',
         }),
         defineField({
             name: 'statutenFile',
