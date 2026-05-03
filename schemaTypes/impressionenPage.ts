@@ -54,6 +54,12 @@ export const impressionenPage = defineType({
                             validation: (rule) => rule.required(),
                         }),
                         defineField({
+                            name: 'eventName',
+                            title: 'Event Name',
+                            type: 'string',
+                            description: 'Optional event name to display below the year',
+                        }),
+                        defineField({
                             name: 'images',
                             title: 'Images',
                             type: 'array',
