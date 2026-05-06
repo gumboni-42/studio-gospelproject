@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const gospelprojectBedingungenPage = defineType({
@@ -45,7 +46,7 @@ export const gospelprojectBedingungenPage = defineType({
             name: 'body',
             title: 'Content',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Die Teilnahmebedingungen.',
         }),
     ],

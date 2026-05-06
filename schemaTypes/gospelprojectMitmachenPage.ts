@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const gospelprojectMitmachenPage = defineType({
@@ -52,7 +53,7 @@ export const gospelprojectMitmachenPage = defineType({
             name: 'body',
             title: 'Active Content',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Main content explaining how to take part.',
             hidden: ({ document }) => document?.projectStatus === false,
         }),
@@ -60,7 +61,7 @@ export const gospelprojectMitmachenPage = defineType({
             name: 'inactiveBody',
             title: 'Inactive Content',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Content explaining that no project is currently planned.',
             hidden: ({ document }) => document?.projectStatus !== false,
         }),

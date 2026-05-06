@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 import { MailchimpTagsInput } from '../components/MailchimpTagsInput'
 export const gospelprojectAnmeldungPage = defineType({
@@ -45,7 +46,7 @@ export const gospelprojectAnmeldungPage = defineType({
             name: 'body',
             title: 'Content',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Main content with formatting support.',
         }),
         defineField({
@@ -111,7 +112,7 @@ export const gospelprojectAnmeldungPage = defineType({
             name: 'signupFormText',
             title: 'Signup Form Instruction Text',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Instruction text shown above the signup form. Supports links and formatting.',
         }),
         defineField({

@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const kontaktPage = defineType({
@@ -41,7 +42,7 @@ export const kontaktPage = defineType({
             name: 'contactText',
             title: 'Contact Text',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Text shown above the contact form.',
         }),
     ],

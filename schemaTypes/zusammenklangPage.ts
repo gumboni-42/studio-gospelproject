@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const zusammenklangPage = defineType({
@@ -30,7 +31,7 @@ export const zusammenklangPage = defineType({
             name: 'body',
             title: 'Content',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Main content (Sponsoring-Konzept, Kontakt section, etc.)',
         }),
         defineField({

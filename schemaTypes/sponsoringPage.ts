@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const sponsoringPage = defineType({
@@ -27,7 +28,7 @@ export const sponsoringPage = defineType({
             name: 'body',
             title: 'Content',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Main content explaining the sponsoring opportunities.',
         }),
         defineField({

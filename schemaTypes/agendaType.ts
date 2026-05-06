@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const agendaType = defineType({
@@ -39,7 +40,7 @@ export const agendaType = defineType({
             name: 'description',
             title: 'Beschreibung',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
         }),
         defineField({
             name: 'logoType',

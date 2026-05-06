@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const teamMember = defineType({
@@ -50,7 +51,7 @@ export const teamMember = defineType({
         defineField({
             name: 'bio',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
         }),
     ],
 })

@@ -1,5 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
+import { portableTextConfig } from './portableTextConfig'
+
 export const gospelvereinPage = defineType({
     name: 'gospelvereinPage',
     title: 'Gospelverein Page',
@@ -45,7 +47,7 @@ export const gospelvereinPage = defineType({
             name: 'body',
             title: 'Text Body',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Main content with formatting support.',
         }),
         defineField({
@@ -58,7 +60,7 @@ export const gospelvereinPage = defineType({
             name: 'mitgliedschaftText',
             title: 'Mitgliedschaft Text',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Text section for Mitgliedschaft.',
         }),
         defineField({
@@ -71,7 +73,7 @@ export const gospelvereinPage = defineType({
             name: 'goennerText',
             title: 'Gönner Text',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Text section for Gönner.',
         }),
         defineField({
@@ -89,7 +91,7 @@ export const gospelvereinPage = defineType({
             name: 'twintText',
             title: 'Twint Text',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Text section for Twint.',
         }),
         defineField({

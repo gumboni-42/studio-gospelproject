@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const gospelationPage = defineType({
@@ -45,7 +46,7 @@ export const gospelationPage = defineType({
             name: 'body',
             title: 'Text Body',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [portableTextConfig],
             description: 'Main content with formatting support.',
         }),
         defineField({
