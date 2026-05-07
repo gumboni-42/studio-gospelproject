@@ -97,6 +97,18 @@ export const gospelprojectAnmeldungPage = defineType({
             description: 'Current number of signups (System managed)',
         }),
         defineField({
+            name: 'successTitle',
+            title: 'Success Message Title',
+            type: 'string',
+            initialValue: 'Vielen Dank für Deine Anmeldung!',
+        }),
+        defineField({
+            name: 'successText',
+            title: 'Success Message Text',
+            type: 'text',
+            initialValue: 'Wir haben Deine Daten erfolgreich erhalten und freuen uns, dass Du beim nächsten Gospelproject dabei bist.',
+        }),
+        defineField({
             name: 'ausgebuchtTitle',
             title: 'Ausgebucht Title',
             type: 'string',

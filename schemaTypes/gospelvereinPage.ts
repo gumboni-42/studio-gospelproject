@@ -103,5 +103,24 @@ export const gospelvereinPage = defineType({
             },
             description: 'Upload the Statuten PDF here.',
         }),
+        defineField({
+            name: 'contactEmail',
+            title: 'Contact Email',
+            type: 'string',
+            initialValue: 'info@gospelverein.ch',
+            description: 'The email address shown in the success message if something goes wrong.',
+        }),
+        defineField({
+            name: 'successTitle',
+            title: 'Success Message Title',
+            type: 'string',
+            initialValue: 'Herzlichen Dank für deine Gönnerschaft und willkommen in unserem Trägerkreis!',
+        }),
+        defineField({
+            name: 'successText',
+            title: 'Success Message Text',
+            type: 'text',
+            initialValue: 'Du erhältst in Kürze eine Bestätigung und weitere Infos per E-Mail. Sollte diese ausbleiben, melde dich gerne an info@gospelverein.ch',
+        }),
     ],
 })
