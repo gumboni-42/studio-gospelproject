@@ -35,6 +35,13 @@ export const zusammenklangPage = defineType({
             description: 'Main content (Sponsoring-Konzept, Kontakt section, etc.)',
         }),
         defineField({
+            name: 'contact',
+            title: 'Contact Info',
+            type: 'array',
+            of: [portableTextConfig],
+            description: 'Contact Info',
+        }),
+        defineField({
             name: 'sponsoringKonzeptPdf',
             title: 'Sponsoring-Konzept PDF',
             type: 'file',
