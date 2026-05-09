@@ -27,23 +27,11 @@ export const kontaktPage = defineType({
             options: { hotspot: true },
         }),
         defineField({
-            name: 'logo',
-            title: 'Logo',
-            type: 'cloudinary.asset',
-        }),
-        defineField({
-            name: 'showLogo',
-            title: 'Show Logo',
-            type: 'boolean',
-            initialValue: true,
-            description: 'Toggle to show or hide the logo on the page.',
-        }),
-        defineField({
             name: 'contactText',
             title: 'Contact Text',
             type: 'array',
             of: [portableTextConfig],
-            description: 'Text shown above the contact form.',
+            description: 'Text shown below the contact form.',
         }),
     ],
 })
