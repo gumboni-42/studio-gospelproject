@@ -212,12 +212,22 @@ export default defineConfig({
                   .documentId('impressionenPage')
               ),
 
+            S.listItem()
+              .title('Newsletter Banner Settings')
+              .id('newsletterBannerSettings')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('newsletterBannerSettings')
+                  .documentId('newsletterBannerSettings')
+              ),
+
             S.divider(), // Adds a visual line in the sidebar
 
             // 2. Regular Document Lists (e.g. your Gallery or Blog)
             // This filters out the singletons so they don't appear in the "Regular" list
             ...S.documentTypeListItems().filter(
-              (listItem) => !['sponsoringPage', 'gospelprojectPage', 'gospelprojectBedingungenPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'kontaktPage', 'footerSettings', 'navigationSettings', 'gospelvereinPage', 'newsletterPage', 'zusammenklangPage', 'impressionenPage'].includes(listItem.getId() as string)
+              (listItem) => !['sponsoringPage', 'gospelprojectPage', 'gospelprojectBedingungenPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'kontaktPage', 'footerSettings', 'navigationSettings', 'gospelvereinPage', 'newsletterPage', 'zusammenklangPage', 'impressionenPage', 'newsletterBannerSettings'].includes(listItem.getId() as string)
             ),
           ]),
     }),

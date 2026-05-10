@@ -21,5 +21,6 @@ import { gospelprojectBedingungenPage } from './gospelprojectBedingungenPage'
 import { gospelvereinPage } from './gospelvereinPage'
 import { newsletterPage } from './newsletterPage'
 import { zusammenklangPage } from './zusammenklangPage'
+import { newsletterBannerSettings } from './newsletterBannerSettings'
 
-export const schemaTypes = [teamMember, agendaType, homePage, impressionenPage, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, gospelprojectBedingungenPage, gospelvereinPage, newsletterPage, zusammenklangPage]
+export const schemaTypes = [teamMember, agendaType, homePage, impressionenPage, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, gospelprojectBedingungenPage, gospelvereinPage, newsletterPage, zusammenklangPage, newsletterBannerSettings]
