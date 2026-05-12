@@ -125,8 +125,8 @@ export const gospelvereinPage = defineType({
         defineField({
             name: 'confirmationEmailMessage',
             title: 'Confirmation Email Message',
-            type: 'text',
-            initialValue: 'Vielen Dank für deine Anmeldung als Gönner. Im Anhang findest du die Zahlungsinformationen.',
+            type: 'array',
+            of: [portableTextConfig],
             description: 'The message sent to the person who submitted the form.',
         }),
         defineField({
