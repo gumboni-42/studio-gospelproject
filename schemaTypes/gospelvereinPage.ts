@@ -122,5 +122,21 @@ export const gospelvereinPage = defineType({
             type: 'text',
             initialValue: 'Du erhältst in Kürze eine Bestätigung und weitere Infos per E-Mail. Sollte diese ausbleiben, melde dich gerne an info@gospelverein.ch',
         }),
+        defineField({
+            name: 'confirmationEmailMessage',
+            title: 'Confirmation Email Message',
+            type: 'text',
+            initialValue: 'Vielen Dank für deine Anmeldung als Gönner. Im Anhang findest du die Zahlungsinformationen.',
+            description: 'The message sent to the person who submitted the form.',
+        }),
+        defineField({
+            name: 'paymentInformationPdf',
+            title: 'Payment Information PDF',
+            type: 'file',
+            options: {
+                accept: '.pdf'
+            },
+            description: 'This PDF will be attached to the confirmation email sent to the user.',
+        }),
     ],
 })
