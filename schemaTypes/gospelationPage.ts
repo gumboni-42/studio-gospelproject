@@ -50,6 +50,12 @@ export const gospelationPage = defineType({
             description: 'Main content with formatting support.',
         }),
         defineField({
+            name: 'popupModal',
+            title: 'Popup Modal',
+            type: 'popupModal',
+            description: 'Optional popup modal dialog configuration.',
+        }),
+        defineField({
             name: 'callToAction',
             title: 'Call to Action',
             type: 'callToAction',
