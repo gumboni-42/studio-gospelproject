@@ -32,6 +32,28 @@ export const sponsoringPage = defineType({
             description: 'Main content explaining the sponsoring opportunities.',
         }),
         defineField({
+            name: 'showWishlistPromo',
+            title: 'Wunschliste Promo anzeigen',
+            type: 'boolean',
+            initialValue: true,
+            description: 'Aktivieren, um die Wunschliste-Promo-Box auf der Sponsoring-Seite anzuzeigen.',
+        }),
+        defineField({
+            name: 'wishlistPromoTitle',
+            title: 'Wunschliste Promo Titel',
+            type: 'string',
+            initialValue: 'Unsere Wunschliste',
+            hidden: ({ parent }) => !parent?.showWishlistPromo,
+        }),
+        defineField({
+            name: 'wishlistPromoText',
+            title: 'Wunschliste Promo Text',
+            type: 'text',
+            rows: 3,
+            initialValue: 'Wähle selbst aus, welchen Teil des Gospelprojects du finanzieren möchtest – von der Eventtechnik bis zu einzelnen Songs.',
+            hidden: ({ parent }) => !parent?.showWishlistPromo,
+        }),
+        defineField({
             name: 'qrCodeImage',
             title: 'Twint QR Code',
             type: 'cloudinary.asset',
