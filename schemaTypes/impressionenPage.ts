@@ -51,6 +51,70 @@ export const impressionenPage = defineType({
             description: 'Text section displayed at the top of the page.',
         }),
         defineField({
+            name: 'cdPromo',
+            title: 'CD Promotion',
+            type: 'object',
+            description: 'Zwei quadratische Bilder nebeneinander zur CD-Bewerbung.',
+            options: { collapsible: true, collapsed: false },
+            fields: [
+                defineField({
+                    name: 'title',
+                    title: 'Titel (optional)',
+                    type: 'string',
+                    description: 'Optionale Überschrift über den CDs (z.B. "Unsere CDs").',
+                }),
+                defineField({
+                    name: 'cds',
+                    title: 'CDs',
+                    type: 'array',
+                    description: 'Bis zu 2 CDs (quadratische Bilder nebeneinander)',
+                    validation: (rule) => rule.max(2).warning('Maximal 2 CDs für dieses Layout empfohlen.'),
+                    of: [
+                        defineField({
+                            name: 'cdItem',
+                            title: 'CD',
+                            type: 'object',
+                            fields: [
+                                defineField({
+                                    name: 'image',
+                                    title: 'Cover-Bild (quadratisch)',
+                                    type: 'cloudinary.asset',
+                                    validation: (rule) => rule.required(),
+                                }),
+                                defineField({
+                                    name: 'title',
+                                    title: 'Album-Titel / Name (optional)',
+                                    type: 'string',
+                                }),
+                                defineField({
+                                    name: 'link',
+                                    title: 'Link (optional)',
+                                    type: 'url',
+                                    description: 'Optionaler Link bei Klick (z.B. zu Shop, Streaming oder Bestellung)',
+                                    validation: (rule) => rule.uri({
+                                        allowRelative: true,
+                                        scheme: ['http', 'https', 'mailto'],
+                                    }),
+                                }),
+                            ],
+                            preview: {
+                                select: {
+                                    title: 'title',
+                                    media: 'image',
+                                },
+                                prepare({ title, media }) {
+                                    return {
+                                        title: title || 'CD',
+                                        media,
+                                    }
+                                },
+                            },
+                        }),
+                    ],
+                }),
+            ],
+        }),
+        defineField({
             name: 'years',
             title: 'Years',
             type: 'array',
