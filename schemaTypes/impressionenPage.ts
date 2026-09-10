@@ -1,3 +1,4 @@
+import { portableTextConfig } from './portableTextConfig'
 import { defineField, defineType } from 'sanity'
 
 export const impressionenPage = defineType({
@@ -36,6 +37,18 @@ export const impressionenPage = defineType({
             type: 'boolean',
             initialValue: true,
             description: 'Toggle to show or hide the logo on the page.',
+        }),
+        defineField({
+            name: 'subtitle',
+            title: 'Subtitle',
+            type: 'string',
+        }),
+        defineField({
+            name: 'body',
+            title: 'Text Body',
+            type: 'array',
+            of: [portableTextConfig],
+            description: 'Text section displayed at the top of the page.',
         }),
         defineField({
             name: 'years',
