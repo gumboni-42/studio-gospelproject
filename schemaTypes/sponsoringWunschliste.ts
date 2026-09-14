@@ -139,13 +139,13 @@ export const sponsoringWunschliste = defineType({
             name: 'successTitle',
             title: 'Success Message Title',
             type: 'string',
-            initialValue: 'Vielen Dank für dein Interesse!',
+            initialValue: 'Vielen Dank für deine Unterstützung!',
         }),
         defineField({
             name: 'successText',
             title: 'Success Message Text',
             type: 'text',
-            initialValue: 'Wir haben deine Auswahl erhalten und melden uns in Kürze bei dir. Gemeinsam bringen wir das Gospelproject zum Klingen!',
+            initialValue: 'Wir haben deine Auswahl erhalten Gemeinsam bringen wir das Gospelproject zum Klingen!',
         }),
     ],
 })
