@@ -1,6 +1,7 @@
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
-import { HomeIcon, DocumentIcon } from '@sanity/icons' // Optional icons
+import HomeIcon from '@sanity/icons/Home'
+import DocumentIcon from '@sanity/icons/Document'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
 import { cloudinarySchemaPlugin } from 'sanity-plugin-cloudinary'

@@ -15,10 +15,10 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^5.31.2",
-    "react": "^19.1",
-    "react-dom": "^19.1",
-    "sanity": "^5.31.1",
+    "@sanity/vision": "^6.14.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sanity": "^6.14.1",
     "sanity-plugin-cloudinary": "^2.1.2",
     "styled-components": "^6.1.18"
   },

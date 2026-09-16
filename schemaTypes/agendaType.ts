@@ -75,6 +75,36 @@ export const agendaType = defineType({
             hidden: true,
         }),
         defineField({
+            name: 'ticketStatus',
+            title: 'Ticket-Status',
+            type: 'string',
+            description: 'Wähle den aktuellen Ticketstatus für diesen Anlass.',
+            options: {
+                list: [
+                    { title: '🕐 Tickets noch nicht im Verkauf', value: 'not_yet' },
+                    { title: '🎟 Tickets im Verkauf', value: 'on_sale' },
+                    { title: '❌ Ausverkauft', value: 'sold_out' },
+                ],
+                layout: 'radio',
+            },
+        }),
+        defineField({
+            name: 'ticketNotYetText',
+            title: 'Badge-Text «Noch nicht im Verkauf»',
+            type: 'string',
+            description: 'Standard: «Tickets demnächst erhältlich»',
+            placeholder: 'Tickets demnächst erhältlich',
+            hidden: ({ parent }) => parent?.ticketStatus !== 'not_yet',
+        }),
+        defineField({
+            name: 'ticketSoldOutText',
+            title: 'Badge-Text «Ausverkauft»',
+            type: 'string',
+            description: 'Standard: «Ausverkauft»',
+            placeholder: 'Ausverkauft',
+            hidden: ({ parent }) => parent?.ticketStatus !== 'sold_out',
+        }),
+        defineField({
             name: 'ticketInfo',
             title: 'Hinweis Eintritt / Kollekte / Preise',
             type: 'string',
@@ -85,6 +115,7 @@ export const agendaType = defineType({
             title: 'Ticket-Link (extern)',
             type: 'url',
             description: 'Optionaler externer Link zum Ticketverkauf (z.B. Eventfrog, Ticketino)',
+            hidden: ({ parent }) => parent?.ticketStatus !== 'on_sale',
         }),
         defineField({
             name: 'ticketButtonText',
@@ -92,6 +123,7 @@ export const agendaType = defineType({
             type: 'string',
             description: 'Optional, Standard ist «Tickets kaufen»',
             initialValue: 'Tickets kaufen',
+            hidden: ({ parent }) => parent?.ticketStatus !== 'on_sale',
         }),
         defineField({
             name: 'description',
