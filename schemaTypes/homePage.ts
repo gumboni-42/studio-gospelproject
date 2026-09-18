@@ -51,7 +51,7 @@ export const homePage = defineType({
                             options: {
                                 list: [
                                     { title: 'Home', value: '/' },
-                                    { title: 'Agenda', value: '/agenda' },
+                                    { title: 'Konzerte', value: '/konzerte' },
                                     { title: 'Gospelproject', value: '/gospelproject' },
                                     { title: 'Gospelproject - Mitmachen', value: '/gospelproject/mitmachen' },
                                     { title: 'Gospelproject - Anmeldung', value: '/gospelproject/anmeldung' },
@@ -102,7 +102,7 @@ export const homePage = defineType({
                     options: {
                         list: [
                             { title: 'Home', value: '/' },
-                            { title: 'Agenda', value: '/agenda' },
+                            { title: 'Konzerte', value: '/konzerte' },
                             { title: 'Gospelproject', value: '/gospelproject' },
                             { title: 'Gospelproject - Mitmachen', value: '/gospelproject/mitmachen' },
                             { title: 'Gospelproject - Anmeldung', value: '/gospelproject/anmeldung' },
@@ -144,7 +144,7 @@ export const homePage = defineType({
                     options: {
                         list: [
                             { title: 'Home', value: '/' },
-                            { title: 'Agenda', value: '/agenda' },
+                            { title: 'Konzerte', value: '/konzerte' },
                             { title: 'Gospelproject', value: '/gospelproject' },
                             { title: 'Gospelproject - Mitmachen', value: '/gospelproject/mitmachen' },
                             { title: 'Gospelproject - Anmeldung', value: '/gospelproject/anmeldung' },
