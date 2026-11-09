@@ -12,7 +12,6 @@ const logoField = defineField({
     name: 'logo',
     title: 'Logo',
     type: 'cloudinary.asset',
-    validation: (rule) => rule.required(),
 })
 
 const urlField = defineField({
