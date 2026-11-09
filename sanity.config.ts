@@ -73,6 +73,16 @@ export default defineConfig({
               ),
 
             S.listItem()
+              .title('Sponsoren Page')
+              .id('sponsorenPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document()
+                  .schemaType('sponsorenPage')
+                  .documentId('sponsorenPage')
+              ),
+
+            S.listItem()
               .title('Gospelproject Termine Page')
               .id('gospelprojectTerminePage')
               .icon(DocumentIcon)
@@ -228,7 +238,7 @@ export default defineConfig({
             // 2. Regular Document Lists (e.g. your Gallery or Blog)
             // This filters out the singletons so they don't appear in the "Regular" list
             ...S.documentTypeListItems().filter(
-              (listItem) => !['sponsoringPage', 'gospelprojectPage', 'gospelprojectBedingungenPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'kontaktPage', 'footerSettings', 'navigationSettings', 'gospelvereinPage', 'newsletterPage', 'zusammenklangPage', 'impressionenPage', 'newsletterBannerSettings'].includes(listItem.getId() as string)
+              (listItem) => !['sponsoringPage', 'sponsorenPage', 'gospelprojectPage', 'gospelprojectBedingungenPage', 'gospelprojectMitmachenPage', 'gospelprojectAnmeldungPage', 'gospelprojectTerminePage', 'gospelprojectMemberPage', 'gospelationPage', 'gospelationEngagierenPage', 'homePage', 'teamPage', 'agendaPage', 'kontaktPage', 'footerSettings', 'navigationSettings', 'gospelvereinPage', 'newsletterPage', 'zusammenklangPage', 'impressionenPage', 'newsletterBannerSettings'].includes(listItem.getId() as string)
             ),
           ]),
     }),

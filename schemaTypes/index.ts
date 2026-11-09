@@ -1,5 +1,6 @@
 import { sponsoringPage } from './sponsoringPage'
 import { sponsoringWunschliste } from './sponsoringWunschliste'
+import { sponsorenPage } from './sponsorenPage'
 import { teamMember } from './teamMember'
 import { agendaType } from './agendaType'
 import { homePage } from './homePage'
@@ -25,4 +26,4 @@ import { zusammenklangPage } from './zusammenklangPage'
 import { newsletterBannerSettings } from './newsletterBannerSettings'
 import { popupModal } from './popupModal'
 
-export const schemaTypes = [teamMember, agendaType, homePage, impressionenPage, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, sponsoringWunschliste, gospelprojectBedingungenPage, gospelvereinPage, newsletterPage, zusammenklangPage, newsletterBannerSettings, popupModal]
+export const schemaTypes = [teamMember, agendaType, homePage, impressionenPage, gospelationPage, agendaPage, teamPage, gospelationEngagierenPage, threeImageSection, gospelprojectPage, gospelprojectMitmachenPage, gospelprojectAnmeldungPage, gospelprojectTerminePage, kontaktPage, gospelprojectMemberPage, footerSettings, navigationSettings, callToAction, sponsoringPage, sponsoringWunschliste, sponsorenPage, gospelprojectBedingungenPage, gospelvereinPage, newsletterPage, zusammenklangPage, newsletterBannerSettings, popupModal]
